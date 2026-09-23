@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rental Analysis — 4228 Campsite Loop Circle | Verandah Properties</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#008C82;--teal-deep:#00625B;--gold:#C9A227;--charcoal:#1A1A1A;
+--body:#1F1F1F;--muted:#5A5651;--strong:#0F0F0F;--line:#E2DED7;--paper:#FBFAF7;--panel:#F3F1EC;
+--red:#B5543C;--rose:#D4886F;--green:#4E8C6A;--slate:#6B7C8C}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--body);font-family:'Jost',system-ui,sans-serif;font-weight:400;font-size:16.5px;line-height:1.68}
+.wrap{max-width:900px;margin:0 auto;padding:0 26px}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;color:var(--charcoal)}
+h1{font-size:2.5rem;line-height:1.1;margin:0 0 .4rem}
+h2{font-size:1.8rem;line-height:1.2;margin:0 0 .8rem}
+h3{font-size:1.18rem;margin:1.4rem 0 .45rem}
+p{margin:0 0 1rem;max-width:74ch}
+b,strong{font-weight:600;color:var(--strong)}
+ul{margin:0 0 1rem;padding-left:1.2rem;max-width:74ch}
+li{margin-bottom:.5rem}
+.mast{background:var(--charcoal);color:#F5F3EE;padding:28px 0 30px}
+.brandline{display:flex;align-items:baseline;gap:13px;flex-wrap:wrap}
+.mark{width:33px;height:33px;border-radius:50%;background:var(--teal);color:#fff;font-family:'Cormorant Garamond',serif;font-size:21px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;transform:translateY(5px)}
+.brandname{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:#F5F3EE}
+.mast .tag{color:#A9A49C;font-size:.83rem;margin-left:auto;text-align:right;line-height:1.5}
+.kicker{color:var(--gold);font-size:.9rem;margin:22px 0 4px}
+.mast h1{color:#FBFAF7;margin-top:4px}
+.mast .sub{color:#B8B2A8;margin:0;font-size:1rem}
+.rec{background:var(--teal);color:#fff;padding:32px 0 30px}
+.rec h2{color:#fff;font-size:1.5rem;margin-bottom:.3rem}
+.rec .lead{color:#D6EDEA;max-width:70ch;margin-bottom:24px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.28);border-radius:10px;overflow:hidden}
+.step{background:var(--teal);padding:20px}
+.step .k{font-size:.82rem;color:#CDE8E5;margin-bottom:6px}
+.step .v{font-family:'Cormorant Garamond',serif;font-size:2.4rem;line-height:1;color:#fff}
+.step .n{font-size:.87rem;color:#CDE8E5;margin-top:7px;line-height:1.45}
+.step:first-child{background:var(--teal-deep)}
+section{padding:38px 0;border-top:1px solid var(--line)}
+.snum{color:var(--teal-deep);font-size:.9rem;margin:0 0 .2rem}
+h2 em{font-style:italic;font-weight:400;color:var(--teal-deep)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;margin:0 0 20px}
+.fact{padding:14px 17px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.fact .k{font-size:.79rem;color:var(--muted);margin-bottom:2px}
+.fact .v{font-weight:600;color:var(--strong)}
+.confirm{color:#8A6D0B;background:#FBF3D8;padding:1px 7px;border-radius:4px;font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:0 0 20px}
+.st{background:#fff;padding:18px}
+.st .v{font-family:'Cormorant Garamond',serif;font-size:2rem;line-height:1.05;color:var(--teal-deep)}
+.st .v.warn{color:var(--red)}
+.st .k{font-size:.85rem;color:var(--muted);margin-top:5px;line-height:1.45}
+.pull{border-left:4px solid var(--gold);background:#fff;padding:19px 24px;border-radius:0 8px 8px 0;margin:0 0 22px}
+.pull p:last-child{margin-bottom:0}
+.anchor{background:#fff;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:10px;padding:22px 26px;margin:0 0 22px}
+.anchor h3{margin-top:0;font-size:1.3rem}
+.anchor .grid{display:grid;grid-template-columns:1fr 1fr;gap:0 24px;margin:14px 0 0}
+.anchor .row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line);font-size:.94rem}
+.anchor .row b{color:var(--teal-deep)}
+.box{background:#fff;border:1px solid var(--line);border-radius:10px;padding:21px 24px;margin:0 0 20px}
+.box h3{margin-top:0}
+.box p:last-child{margin-bottom:0}
+details{border:1px solid var(--line);border-radius:9px;background:#fff;margin:0 0 14px}
+summary{cursor:pointer;padding:15px 19px;font-weight:600;color:var(--teal-deep);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.45rem;color:var(--gold);line-height:1;flex:0 0 auto}
+details[open] summary::after{content:"\2212"}
+summary:hover{background:var(--panel)}
+.dbody{padding:2px 19px 17px}
+.dbody > *:last-child{margin-bottom:0}
+.tscroll{overflow-x:auto;margin:0 0 14px}
+table{border-collapse:collapse;width:100%;font-size:.88rem;background:#fff;min-width:680px}
+th{background:var(--panel);color:var(--strong);font-weight:600;text-align:left;padding:10px 11px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:10px 11px;border-bottom:1px solid var(--line);vertical-align:top}
+tr.hi td{background:#E6F3F1;font-weight:600}
+tr.gold td{background:#FBF3D8}
+td.num,th.num{text-align:right;white-space:nowrap}
+caption{caption-side:bottom;text-align:left;color:var(--muted);font-size:.86rem;padding-top:9px}
+.pill{display:inline-block;font-size:.77rem;padding:2px 8px;border-radius:20px;font-weight:500}
+.fast{background:#DFF0EC;color:#00625B}.slow{background:#F6E3DE;color:#8A3B26}
+.chart{background:#fff;border:1px solid var(--line);border-radius:10px;padding:24px 26px;margin:0 0 22px}
+.chart h3{margin:0 0 4px}
+.chart .cap{font-size:.9rem;color:var(--muted);margin:0 0 18px}
+.bar{display:grid;grid-template-columns:190px 1fr;gap:13px;align-items:center;margin-bottom:11px;font-size:.9rem}
+.track{background:var(--panel);border-radius:4px;height:26px;overflow:hidden}
+.fill{height:26px;border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;color:#fff;font-weight:600;font-size:.85rem;white-space:nowrap}
+.fill.t{background:var(--teal)}.fill.g{background:var(--gold)}.fill.r{background:var(--red)}.fill.s{background:var(--slate)}.fill.gr{background:var(--green)}
+.src{font-size:.85rem;color:var(--muted);margin:14px 0 0;padding-top:13px;border-top:1px solid var(--line)}
+footer{background:var(--charcoal);color:#B8B2A8;padding:30px 0;font-size:.89rem}
+footer .sig{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold);margin-bottom:8px}
+footer a{color:#8FD2CB}
+@media(max-width:720px){body{font-size:16px}h1{font-size:1.95rem}h2{font-size:1.45rem}.steps{grid-template-columns:1fr}.anchor .grid{grid-template-columns:1fr}.mast .tag{margin-left:0;width:100%;text-align:left}.bar{grid-template-columns:120px 1fr;font-size:.82rem}}
+@media print{body{background:#fff}section{page-break-inside:avoid}summary::after{content:""}}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="wrap">
+    <div class="brandline">
+      <span class="mark">V</span>
+      <span class="brandname">Verandah Properties, LLC</span>
+      <span class="tag">Rental Analysis<br>September 23, 2026</span>
+    </div>
+    <p class="kicker">Tyson Ranch · Orlando</p>
+    <h1>4228 Campsite Loop Circle</h1>
+    <p class="sub">Orlando, FL 32824 · Townhome · 3 bed / 2.5 bath · 1,458 sq ft · Built 2025</p>
+  </div>
+</header>
+
+<div class="rec">
+  <div class="wrap">
+    <h2>Our recommendation</h2>
+    <p class="lead">Tyson Ranch has produced fourteen leases this year, which is an unusually rich data set. Read together, they show two things clearly: a narrow price band for homes your size, and a calendar that is working against us. Both shape the number below.</p>
+    <div class="steps">
+      <div class="step"><div class="k">Launch price</div><div class="v">$2,395</div><div class="n">Under the $2,400 search threshold and below both competing listings.</div></div>
+      <div class="step"><div class="k">Day 5 checkpoint</div><div class="v">$2,345</div><div class="n">If showings aren't strong enough to let us choose a resident, we move by an amount renters notice.</div></div>
+      <div class="step"><div class="k">Next step</div><div class="v">$2,295</div><div class="n">A step, not a bottom. We keep reading the market and moving with it.</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<section style="border-top:none">
+  <p class="snum">Section One</p>
+  <h2>The property and the data set</h2>
+  <div class="facts">
+    <div class="fact"><div class="k">Configuration</div><div class="v">3 bed / 2.5 bath</div></div>
+    <div class="fact"><div class="k">Heated sq ft</div><div class="v">1,458</div></div>
+    <div class="fact"><div class="k">Year built</div><div class="v">2025</div></div>
+    <div class="fact"><div class="k">Community</div><div class="v">Tyson Ranch — gated</div></div>
+  </div>
+  <p>Tyson Ranch is a gated community with a pool, dog park and walking trails, roughly ten minutes from Orlando International Airport and the Brightline station, and minutes from Lake Nona and Medical City. Your home is nearly new, which puts it at the top end of the community's product.</p>
+  <p>We have <b>twenty comparable listings</b> to work from — fourteen leased this year, five currently active and one pending — all three-bedroom townhomes in the same community. That is far more data than most analyses have, and it lets us be specific rather than approximate.</p>
+</section>
+
+<section>
+  <p class="snum">Section Two</p>
+  <h2>The calendar is the <em>biggest single factor</em></h2>
+  <p>You asked us to look at when these homes came to market, not just what they leased for. That turned out to be the most important thing in the data.</p>
+
+  <div class="chart">
+    <h3>Days to lease, by the month the home was listed</h3>
+    <p class="cap">Fourteen Tyson Ranch leases, 2026</p>
+    <div class="bar"><span>Listed in April (4 homes)</span><span class="track"><span class="fill gr" style="width:12%">34 days</span></span></div>
+    <div class="bar"><span>Listed in May (5 homes)</span><span class="track"><span class="fill gr" style="width:11%">32 days</span></span></div>
+    <div class="bar"><span>Listed in June (2 homes)</span><span class="track"><span class="fill gr" style="width:12%">34 days</span></span></div>
+    <div class="bar"><span>Listed in July (1 home)</span><span class="track"><span class="fill g" style="width:24%">68 days</span></span></div>
+    <div class="bar"><span>Listed in August (1 home)</span><span class="track"><span class="fill g" style="width:13%">37 days</span></span></div>
+    <div class="bar"><span>Listed in October 2025 (1 home)</span><span class="track"><span class="fill r" style="width:100%">287 days</span></span></div>
+    <p class="src">Average days to lease by listing month. The October figure is a single home, but it is the only comparable in this community that launched in the fall.</p>
+  </div>
+
+  <p>Homes that came to market in <b>April, May and June leased in about a month</b> — the spring and early-summer window when families relocate and the rental market is at its most active.</p>
+  <p>Then it changes. The one home listed in July took <b>68 days</b>. And <b>4410 Campsite Loop, listed in late October 2025, took 287 days</b> — more than nine months — and had to cut its price $150 along the way. It finally leased in August 2026, once the market came back around.</p>
+
+  <div class="pull">
+    <p>We are listing at the end of September. That is the beginning of the slower half of the year, not the end of the busy one. It does not mean the home won't lease — it means the price has to do more of the work than it would have in May.</p>
+  </div>
+
+  <p>The current listings confirm it. Five homes are on the market now, all listed between late July and mid-September. <b>Not one of them has leased.</b> Two have been sitting 51 and 57 days.</p>
+</section>
+
+<section>
+  <p class="snum">Section Three</p>
+  <h2>The price band for a home your size</h2>
+  <p>Six leased comparables are within about 100 square feet of yours. This is the tightest read we have.</p>
+  <div class="tscroll">
+  <table>
+    <thead><tr><th>Property</th><th class="num">Sq ft</th><th class="num">Built</th><th class="num">Listed</th><th class="num">Leased</th><th class="num">$/sf</th><th class="num">Days</th><th>Came to market</th></tr></thead>
+    <tbody>
+      <tr><td>4112 Campsite Loop</td><td class="num">1,379</td><td class="num">2025</td><td class="num">$2,500</td><td class="num">$2,500</td><td class="num">$1.81</td><td class="num"><span class="pill fast">13</span></td><td>April 30</td></tr>
+      <tr><td>4706 Campsite Loop</td><td class="num">1,379</td><td class="num">2025</td><td class="num">$2,500</td><td class="num">$2,500</td><td class="num">$1.81</td><td class="num">41</td><td>April 28</td></tr>
+      <tr><td>14913 Harvest St</td><td class="num">1,379</td><td class="num">2023</td><td class="num">$2,600</td><td class="num">$2,600</td><td class="num">$1.89</td><td class="num">37</td><td>August 14</td></tr>
+      <tr class="gold"><td>4436 Campsite Loop</td><td class="num">1,472</td><td class="num">2024</td><td class="num">$2,450</td><td class="num">$2,450</td><td class="num">$1.66</td><td class="num">45</td><td>April 25</td></tr>
+      <tr class="gold"><td>4460 Campsite Loop</td><td class="num">1,484</td><td class="num">2024</td><td class="num">$2,500</td><td class="num">$2,400</td><td class="num">$1.62</td><td class="num"><span class="pill slow">68</span></td><td>July 4</td></tr>
+      <tr><td>4488 Campsite Loop</td><td class="num">1,362</td><td class="num">2025</td><td class="num">$2,400</td><td class="num">$2,400</td><td class="num">$1.76</td><td class="num"><span class="pill slow">60</span></td><td>June 2</td></tr>
+    </tbody>
+    <caption>The two gold rows are the closest matches to your 1,458 square feet.</caption>
+  </table>
+  </div>
+
+  <p>The two homes nearest your size tell the story on their own. <b>4436 Campsite Loop</b>, 1,472 square feet, listed in late April at $2,450 and leased at that price in 45 days. <b>4460 Campsite Loop</b>, 1,484 square feet, listed on July 4 at $2,500, had to come down to <b>$2,400</b>, and took <b>68 days</b>.</p>
+  <p>Same community, 12 square feet apart, and a $50 difference in outcome — driven almost entirely by when each came to market.</p>
+  <p>The band for a home your size is <b>$2,400 to $2,500</b>. Spring launches achieved the top of it. Summer launches achieved the bottom of it, and only after a reduction.</p>
+
+  <details>
+    <summary>See all fourteen leases</summary>
+    <div class="dbody">
+      <div class="tscroll">
+      <table>
+        <thead><tr><th>Property</th><th class="num">Sq ft</th><th class="num">Built</th><th class="num">Listed</th><th class="num">Leased</th><th class="num">Days</th><th>Came to market</th></tr></thead>
+        <tbody>
+          <tr><td>4719 Campsite Loop</td><td class="num">1,778</td><td class="num">2026</td><td class="num">$2,600</td><td class="num">$2,600</td><td class="num">6</td><td>May 27</td></tr>
+          <tr><td>14808 Harvest St</td><td class="num">1,652</td><td class="num">2024</td><td class="num">$2,400</td><td class="num">$2,400</td><td class="num">7</td><td>June 3</td></tr>
+          <tr><td>4722 Campsite Loop</td><td class="num">1,669</td><td class="num">2025</td><td class="num">$2,490</td><td class="num">$2,490</td><td class="num">12</td><td>May 29</td></tr>
+          <tr><td>4112 Campsite Loop</td><td class="num">1,379</td><td class="num">2025</td><td class="num">$2,500</td><td class="num">$2,500</td><td class="num">13</td><td>April 30</td></tr>
+          <tr><td>4361 Campsite Loop</td><td class="num">1,654</td><td class="num">2024</td><td class="num">$2,399</td><td class="num">$2,300</td><td class="num">24</td><td>May 29</td></tr>
+          <tr><td>4603 Campsite Loop</td><td class="num">1,769</td><td class="num">2024</td><td class="num">$2,700</td><td class="num">$2,700</td><td class="num">35</td><td>April 28</td></tr>
+          <tr><td>14913 Harvest St</td><td class="num">1,379</td><td class="num">2023</td><td class="num">$2,600</td><td class="num">$2,600</td><td class="num">37</td><td>August 14</td></tr>
+          <tr><td>4706 Campsite Loop</td><td class="num">1,379</td><td class="num">2025</td><td class="num">$2,500</td><td class="num">$2,500</td><td class="num">41</td><td>April 28</td></tr>
+          <tr><td>4436 Campsite Loop</td><td class="num">1,472</td><td class="num">2024</td><td class="num">$2,450</td><td class="num">$2,450</td><td class="num">45</td><td>April 25</td></tr>
+          <tr><td>4152 Campsite Loop</td><td class="num">1,569</td><td class="num">2026</td><td class="num">$2,600</td><td class="num">$2,550</td><td class="num">59</td><td>May 19</td></tr>
+          <tr><td>14819 Harvest St</td><td class="num">1,827</td><td class="num">2024</td><td class="num">$2,550</td><td class="num">$2,550</td><td class="num">60</td><td>May 7</td></tr>
+          <tr><td>4488 Campsite Loop</td><td class="num">1,362</td><td class="num">2025</td><td class="num">$2,400</td><td class="num">$2,400</td><td class="num">60</td><td>June 2</td></tr>
+          <tr><td>4460 Campsite Loop</td><td class="num">1,484</td><td class="num">2024</td><td class="num">$2,500</td><td class="num">$2,400</td><td class="num">68</td><td>July 4</td></tr>
+          <tr><td>4410 Campsite Loop</td><td class="num">1,569</td><td class="num">2023</td><td class="num">$2,500</td><td class="num">$2,350</td><td class="num">287</td><td>October 2025</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>Every one of these shows as leasing at 100% of asking price. That figure is misleading on its own — five of them reduced their asking price first, then leased at the new number. The list-to-lease ratio hides the reduction that made the lease happen.</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <p class="snum">Section Four</p>
+  <h2>What you are competing against right now</h2>
+  <div class="tscroll">
+  <table>
+    <thead><tr><th>Property</th><th class="num">Sq ft</th><th class="num">Built</th><th class="num">Asking</th><th class="num">Days</th><th>Came to market</th></tr></thead>
+    <tbody>
+      <tr><td>14937 Harvest St</td><td class="num">1,451</td><td class="num">2025</td><td class="num">$3,500</td><td class="num"><span class="pill slow">57</span></td><td>July 28</td></tr>
+      <tr><td>4176 Campsite Loop</td><td class="num">1,569</td><td class="num">2025</td><td class="num">$3,000 <span style="color:var(--muted)">(from $3,200)</span></td><td class="num">45</td><td>August 9</td></tr>
+      <tr><td>14917 Harvest St</td><td class="num">1,362</td><td class="num">2023</td><td class="num">$2,850</td><td class="num">23</td><td>August 31</td></tr>
+      <tr><td>4184 Campsite Loop Cir</td><td class="num">1,379</td><td class="num">2025</td><td class="num">$2,450</td><td class="num"><span class="pill slow">51</span></td><td>August 3</td></tr>
+      <tr><td>14922 Harvest St</td><td class="num">1,654</td><td class="num">2025</td><td class="num">$2,450</td><td class="num">8</td><td>September 15</td></tr>
+      <tr class="hi"><td>4228 Campsite Loop Cir — your home at $2,395</td><td class="num">1,458</td><td class="num">2025</td><td class="num">$2,395</td><td class="num">0</td><td>Now</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Three of these are priced well above where this community actually leases — $2,850, $3,000 and $3,500, against a leased average of $2,485. They are not really your competition; they are homes that will sit until they reduce.</p>
+  <p><b>Your real competition is the two homes at $2,450.</b> One is 4184 Campsite Loop Circle, essentially the same product as yours, which has been on the market <b>51 days without leasing</b>. The other is 14922 Harvest Street — <b>196 square feet larger than yours, for the same money</b>, listed eight days ago.</p>
+
+  <div class="pull">
+    <p>Matching $2,450 would put you alongside a home that has already proven $2,450 isn't working this season, and against a larger home at the same price. Neither is a position from which a listing leases quickly.</p>
+  </div>
+</section>
+
+<section>
+  <p class="snum">Section Five</p>
+  <h2>Why $2,395</h2>
+  <div class="box">
+    <h3>It clears the $2,400 search threshold</h3>
+    <p>Renters browse in price brackets, and $2,400 is a common ceiling. Every competing listing sits above it. At $2,395 your home appears in searches none of them reaches, and is the least expensive townhome available in Tyson Ranch.</p>
+  </div>
+  <div class="box">
+    <h3>It reflects the season, not just the size</h3>
+    <p>The band for a home your size is $2,400 to $2,500. Spring launches achieved the top of it; the July launch achieved $2,400 only after a $100 reduction and 68 days. Launching just under the bottom of that band, in late September, is how we avoid repeating that.</p>
+  </div>
+  <div class="box">
+    <h3>It separates you from the two listings at $2,450</h3>
+    <p>$55 is enough for a renter to notice in search results, and it puts you in a different bracket from both. Against the larger home at the same price, being the lower number is the argument that works.</p>
+  </div>
+  <div class="box">
+    <h3>It pays for itself quickly</h3>
+    <p>Launching at $2,395 rather than $2,450 costs $55 a month, or <b>$660 across a 12-month lease</b>. Every vacant day costs about <b>$80</b>. The lower price pays for itself if it leases just <b>eight days sooner</b> — and the home at $2,450 is already 51 days in.</p>
+  </div>
+</section>
+
+<section>
+  <p class="snum">Section Six</p>
+  <h2>How we'll work with the market</h2>
+  <p>We will not promise a number of days. In a market where identical homes took 13 days in April and 68 days in July, any promise would be invented. What we will do is measure and react.</p>
+  <p><b>The first five days are the signal.</b> We track inquiries, showings booked and showings actually attended. Early activity tells us whether the price is landing before the calendar costs us anything.</p>
+  <p><b>If that activity isn't strong enough for us to choose a well-qualified resident</b> rather than accept whoever applies, we move to $2,345. If the market says that is still not enough, we go to $2,295 and keep reading it. $2,295 is a step, not a bottom.</p>
+  <p><b>We also watch the five competing listings daily.</b> Three of them are priced far above the market and will have to reduce. When they do, the field moves and we need to move with it — not three weeks later.</p>
+
+  <div class="pull">
+    <p>The pattern in this community is consistent: homes that price correctly at launch lease at their asking price. Homes that test a higher number reduce anyway, and pay for the test in weeks of vacancy. Every vacant week costs about $560.</p>
+  </div>
+</section>
+
+<section>
+  <p class="snum">Section Seven</p>
+  <h2>Summary</h2>
+  <ul>
+    <li>Tyson Ranch produced <b>fourteen leases</b> this year — an unusually complete data set for a single community.</li>
+    <li><b>Timing dominates.</b> Homes listed April through June leased in about 34 days. The July listing took 68. The one listed in October 2025 took <b>287 days</b> and cut its price $150.</li>
+    <li><b>All five current listings came to market between late July and mid-September, and none has leased.</b></li>
+    <li>The band for a home your size is <b>$2,400 to $2,500</b> — spring launches got the top, the summer launch got the bottom after a reduction.</li>
+    <li>Your direct competition is two homes at <b>$2,450</b>: one nearly identical to yours at 51 days unleased, and one <b>196 square feet larger</b> for the same money.</li>
+    <li>At <b>$2,395</b> you are the only listing under $2,400 and the least expensive home in the community.</li>
+    <li>Launch at $2,395. Read the first five days. Move to $2,345, then $2,295, and keep pivoting with the market.</li>
+  </ul>
+</section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="sig">Curating Orlando's Finest Rental Portfolio</div>
+    <p><b>Verandah Properties, LLC</b><br>Pamela Syvertson, Owner &amp; Broker · License CQ1048619 · <a href="tel:4078550331">407-855-0331</a></p>
+    <p style="font-size:.84rem;color:#8C877F;max-width:74ch">Market data sourced from Stellar MLS as of September 23, 2026, and is deemed reliable but not guaranteed. Comparable analysis reflects unfurnished 3-bedroom townhome rentals in Tyson Ranch, Orlando 32824, and is an opinion of value, not an appraisal.</p>
+  </div>
+</footer>
+
+</body>
+</html>
